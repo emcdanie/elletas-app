@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Search from "./Search.js";
+import Weather from "./Weather.js";
+import Forecast from "./Forecast.js";
+import Footer from "./Footer.js";
+import Sunrise from "./Sunrise.js";
+import "./App.css";
+import "./Search.css";
+import "./Sunrise.css";
+import "./Forecast.css";
+import "./Footer.css";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div class="container-fluid">
+        <div class="weather-app" />
+      </div>
+      <Search />
+      <Weather />
+      <Sunrise />
+      <Forecast />
+      <Footer />
     </div>
   );
 }
-
-export default App;

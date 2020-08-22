@@ -1,0 +1,11 @@
+.Search {
+  font-family: "Quicksand", sans-serif;
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+.btn.btn-light {
+  background-color: #fbdd57;
+  font-family: "Quicksand", sans-serif;
+  color: #5e8686;
+}
