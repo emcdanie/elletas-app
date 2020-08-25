@@ -1,4 +1,6 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.css";
+
 import Search from "./Search.js";
 import Weather from "./Weather.js";
 import Forecast from "./Forecast.js";
