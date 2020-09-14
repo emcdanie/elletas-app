@@ -1,7 +1,7 @@
 .App {
   font-family: "Quicksand", sans-serif;
   max-width: 600px;
-  margin: 30px auto;
+  margin: 0px auto;
   border-radius: 10px;
   background-color: #5e8686;
   border: 1px solid #dadde1;
@@ -26,4 +26,12 @@ p {
   color: white;
   display: block;
   margin-left: 15px;
+}
+
+.link {
+  color: #fbdd57;
+}
+
+.sunrise {
+  font-size: 25px;
 }

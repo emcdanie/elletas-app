@@ -10,6 +10,7 @@ import "./Search.css";
 import "./Sunrise.css";
 import "./Forecast.css";
 import "./Footer.css";
+import "./Weather.css";
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,18 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
+import "Weather.css";
 
-export default function Weather() {
-  let weatherData = {
-    city: "Barcelona",
-    temperature: 30,
-    date: "Saturday Aug 1, 2020 | Time 16:10",
-    description: "Sunny",
-    imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
-    feelslike: 34,
-    humidity: 66,
-    wind: 11,
-  };
+export default function Weather(props) {
+  const [ready, setReady] = useState(false);
+  const [weatherData, setWeatherData] = useState({});
+  const [city, setCity] = useState(props.defaultCity);
 
-  return (
+  function handleResponse(response) {
+    setWeatherData({
+      ready: true,
+      temperature: response.data.main.temp,
+      humidity: response.data.main.humidity,
+      date: new Date(response.data.dt * 1000),
+      description: response.data.weather[0].description,
+      icon: response.data.weather[0].icon,
+      wind: response.data.wind.speed,
+      city: response.data.name,
+    });
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+  function search(){
+  const apiKey = "717c122d03da5b502d476732c8793a31";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(showWeather);
+}
+  if (weatherData.ready) {
+return (
     <div className="Weather">
       <div class="row">
         <div class="col-12">
@@ -61,5 +84,9 @@ export default function Weather() {
         </div>
       </div>
     </div>
-  );
+    
+  } else {
+  search();
+  return "Loading...";
+}
 }

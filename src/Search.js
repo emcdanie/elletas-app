@@ -18,11 +18,11 @@ export default function Search() {
             <input
               type="submit"
               value="Search"
-              className="btn btn-light shadow-sm"
+              className="btn btn-light shadow-sm w-100"
             />
           </div>
           <div className="col-3">
-            <button type="button" className="btn btn-light shadow-sm">
+            <button type="button" className="btn btn-light shadow-sm w-100">
               Current
             </button>
           </div>
