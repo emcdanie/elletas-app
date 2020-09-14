@@ -8,7 +8,7 @@ import Footer from "./Footer.js";
 import Sunrise from "./Sunrise.js";
 import "./App.css";
 import "./Search.css";
-import "./sunrise.css";
+import "./Sunrise.css";
 import "./Forecast.css";
 import "./Footer.css";
 export default function App() {

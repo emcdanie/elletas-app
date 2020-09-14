@@ -9,11 +9,11 @@ export default function Weather(props) {
       ready: true,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
-      date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
-      icon: response.data.weather[0].icon,
+      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
       wind: response.data.wind.speed,
       city: response.data.name,
+      feelslike: response.data.feelslike,
     });
   }
 
@@ -39,7 +39,7 @@ export default function Weather(props) {
           <div className="col-6">
             <div className="clearfix">
               <img
-                src={weatherData.icon}
+                src={weatherData.iconUrl}
                 alt={weatherData.description}
                 className="weather-icon"
               />
