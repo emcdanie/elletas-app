@@ -3,8 +3,8 @@ import axios from "axios";
 import "Weather.css";
 
 export default function Weather(props) {
-  const [ready, setReady] = useState(false);
-  const [weatherData, setWeatherData] = useState({});
+  const [weatherData, setWeatherData] = useState({ ready: false });
+
   const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
@@ -44,7 +44,9 @@ export default function Weather(props) {
               <li class="title">Today </li>
               <li> {weatherData.date} </li>
               <li>
-                <span>{weatherData.description}</span>
+                <span className="text-capitalize">
+                  {weatherData.description}
+                </span>
               </li>
             </ul>
           </div>
@@ -53,7 +55,11 @@ export default function Weather(props) {
         <div className="row">
           <div className="col-6">
             <div className="clearfix">
-              <img src={weatherData.imgUrl} alt={} className="weather-icon" />
+              <img
+                src={response.data.weather[0].icon}
+                alt={weatherData.description}
+                className="weather-icon"
+              />
               <div className="float-right">
                 <span className="temperature">{weatherData.temperature}</span>
                 <span className="units">
