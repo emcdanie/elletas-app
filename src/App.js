@@ -8,10 +8,9 @@ import Footer from "./Footer.js";
 import Sunrise from "./Sunrise.js";
 import "./App.css";
 import "./Search.css";
-import "./Sunrise.css";
+import "./sunrise.css";
 import "./Forecast.css";
 import "./Footer.css";
-
 export default function App() {
   return (
     <div className="App">
@@ -19,7 +18,7 @@ export default function App() {
         <div class="weather-app" />
       </div>
       <Search />
-      <Weather />
+      <Weather defaultCity="Barcelona" />
       <Sunrise />
       <Forecast />
       <Footer />
