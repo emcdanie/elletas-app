@@ -5,7 +5,7 @@ import axios from "axios";
 import "./Weather.css";
 
 export default function Search(props) {
-  const [city, setCity] = useState(props.defaultcity);
+  const [city, setCity] = useState(props.defaultCity);
   const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
     setWeatherData({
@@ -14,7 +14,7 @@ export default function Search(props) {
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
-      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
+      icon: response.data.weather[0].icon,
       wind: response.data.wind.speed,
       city: response.data.name,
       feelslike: response.data.feelslike,
@@ -32,7 +32,7 @@ export default function Search(props) {
 
   function search() {
     const apiKey = "717c122d03da5b502d476732c8793a31";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
 

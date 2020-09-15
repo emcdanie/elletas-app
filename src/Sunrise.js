@@ -12,7 +12,7 @@ export default function Sunrise() {
           <p className="sunrise">
             <img
               src={weatherData.imgUrl}
-              alt={"sunhappy.svg"}
+              alt={"sunrise.svg"}
               className="weather-icon"
             />
             Sunrise 6:45 | Sunset 21:06

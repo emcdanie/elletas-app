@@ -1,0 +1,8 @@
+.Forecast {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.Forecast canvas {
+  display: block;
+}

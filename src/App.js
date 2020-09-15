@@ -17,8 +17,7 @@ export default function App() {
       <div class="container-fluid">
         <div class="weather-app" />
       </div>
-      <Search />
-      <Weather defaultCity="Barcelona" />
+      <Search defaultCity="Barcelona" />
       <Sunrise />
       <Forecast />
       <Footer />
