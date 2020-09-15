@@ -17,9 +17,11 @@ export default function App() {
       <div class="container-fluid">
         <div class="weather-app" />
       </div>
+
       <Search defaultCity="Barcelona" />
       <Sunrise />
       <Forecast />
+
       <Footer />
     </div>
   );
