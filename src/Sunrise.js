@@ -10,11 +10,7 @@ export default function Sunrise() {
       <div className="row">
         <div className="col-12">
           <p className="sunrise">
-            <img
-              src={weatherData.imgUrl}
-              alt={"sunrise.svg"}
-              className="weather-icon"
-            />
+            <img src={"./src/images/sunrise.svg"} />
             Sunrise 6:45 | Sunset 21:06
           </p>
         </div>

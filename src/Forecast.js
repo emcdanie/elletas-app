@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Forecast.css";
+import ForecastBackend from "./ForecastBackend";
 
 export default function Forecast(props) {
   const [loaded, setLoaded] = useState(false);
@@ -14,12 +15,11 @@ export default function Forecast(props) {
   if (loaded && props.city === forecast.city.name) {
     return (
       <div className="Forecast row">
-        <Forecast data={forecast.list[0]} />
-        <Forecast data={forecast.list[1]} />
-        <Forecast data={forecast.list[2]} />
-        <Forecast data={forecast.list[3]} />
-        <Forecast data={forecast.list[4]} />
-        <Forecast data={forecast.list[5]} />
+        <ForecastBackend data={forecast.list[0]} />
+        <ForecastBackend data={forecast.list[1]} />
+        <ForecastBackend data={forecast.list[2]} />
+        <ForecastBackend data={forecast.list[3]} />
+        <ForecastBackend data={forecast.list[4]} />
       </div>
     );
   } else {
