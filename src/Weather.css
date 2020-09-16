@@ -1,6 +1,6 @@
 .weather-icon {
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   margin: 0 auto;
 }
 
@@ -36,11 +36,7 @@
   font-weight: 300px;
   line-height: 1;
 }
-.units {
-  position: relative;
-  top: -34px;
-  color: white;
-}
+
 .Weather .h1 {
   color: white;
   font-size: 40 px;

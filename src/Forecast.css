@@ -7,3 +7,13 @@
 .Forecast canvas {
   display: block;
 }
+.unitC {
+  position: relative;
+  color: #fbdd57;
+  top: -30px;
+}
+.unitF {
+  position: relative;
+  color: #fbdd57;
+  top: -0px;
+}
