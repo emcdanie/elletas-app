@@ -4,6 +4,7 @@ import Weather from "./Weather.js";
 import Sunrise from "./Sunrise";
 import axios from "axios";
 import "./Weather.css";
+import "./Footer.css";
 
 export default function Search(props) {
   const [city, setCity] = useState(props.defaultCity);

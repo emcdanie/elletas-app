@@ -6,10 +6,11 @@ export default function Footer() {
       <div class="row">
         <div class="col-10" className="interested">
           Interested in climate change ?
-          <div className="col-1" float-right>
+          <div className="col-1">
             <a
+              className="clickhere"
               href="https://blog.feedspot.com/global_warming_blogs/"
-              className="link btn btn-light shadow-sm"
+              className="btn btn-light shadow-sm"
             >
               Click Here{" "}
             </a>

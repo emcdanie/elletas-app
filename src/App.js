@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 
 import Search from "./Search.js";
-import Sunrise from "./Sunrise.js";
+
 import Forecast from "./Forecast.js";
 import Footer from "./Footer.js";
 
