@@ -26,7 +26,7 @@ export default function FormatDate(props) {
 
   let currentMonth = month[props.date.getMonth()];
   let currentYear = [props.date.getFullYear()];
-  let currentDay = [props.date.getDay()];
+  let currentDay = [props.date.getDate()];
   let day = days[props.date.getDay()];
   let hours = props.date.getHours();
   if (hours < 10) {

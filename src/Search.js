@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Forecast from "./Forecast";
 import Weather from "./Weather.js";
+import Sunrise from "./Sunrise";
 import axios from "axios";
 import "./Weather.css";
 
@@ -17,7 +18,9 @@ export default function Search(props) {
       icon: response.data.weather[0].icon,
       wind: response.data.wind.speed,
       city: response.data.name,
-      feelslike: response.data.feelslike,
+      feelslike: response.data.main.feels_like,
+      sunrise: response.data.sys.sunrise,
+      sunset: response.data.sys.sunset,
     });
   }
 
@@ -66,6 +69,7 @@ export default function Search(props) {
           </div>
         </form>
         <Weather data={weatherData} />
+        <Sunrise data={weatherData} />
         <Forecast city={weatherData.city} />
       </div>
     );

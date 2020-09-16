@@ -11,6 +11,7 @@ import "./Search.css";
 import "./Sunrise.css";
 import "./Forecast.css";
 import "./Footer.css";
+
 export default function App() {
   return (
     <div className="App">
@@ -18,7 +19,7 @@ export default function App() {
         <div class="weather-app" />
       </div>
       <Search defaultCity="Barcelona" />
-      <Sunrise />
+
       <Forecast />
       <Footer />
     </div>

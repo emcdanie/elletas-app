@@ -1,8 +1,14 @@
-.forecast {
-  margin-top: 50px;
-  text-align: center;
+.link {
+  color: #fbdd57;
 }
-
-img.forecast-icon {
-  height: 70px;
+.interested {
+  color: white;
+  font-size: 25px;
+  margin-left: 30px;
+}
+.link-btn.btn-light {
+  background-color: #fbdd57;
+  font-family: "Quicksand", sans-serif;
+  color: #5e8686;
+  margin-right: 60px;
 }

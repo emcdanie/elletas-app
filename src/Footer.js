@@ -4,29 +4,26 @@ export default function Footer() {
   return (
     <div className="Footer">
       <div class="row">
-        <div class="col-8">
-          <p className="interested">Interested in climate change ?</p>
-          <div className="col-4">
+        <div class="col-10" className="interested">
+          Interested in climate change ?
+          <div className="col-1" float-right>
             <a
               href="https://blog.feedspot.com/global_warming_blogs/"
-              className="btn btn-light shadow-sm"
+              className="link btn btn-light shadow-sm"
             >
               Click Here{" "}
             </a>
-          </div>
+          </div>{" "}
+          Coded by{" "}
+          <a
+            className="link"
+            href="https://github.com/emcdanie/WeatherAppProject"
+          >
+            {" "}
+            Elleta Mcdaniel
+          </a>{" "}
         </div>
       </div>
-      <p>
-        {" "}
-        Coded by{" "}
-        <a
-          className="link"
-          href="https://github.com/emcdanie/WeatherAppProject"
-        >
-          {" "}
-          Elleta Mcdaniel
-        </a>{" "}
-      </p>
     </div>
   );
 }

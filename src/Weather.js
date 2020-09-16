@@ -47,7 +47,7 @@ export default function Weather(props) {
           <ul>
             <li className="current-data">
               {" "}
-              Feels Like: {props.data.feelslike} °C
+              Feels Like: {props.data.feels_like} °C
             </li>
             <li className="current-data">Humidity: {props.data.humidity} %</li>
             <li className="current-data">Wind: {props.data.wind} km/h</li>
