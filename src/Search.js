@@ -18,9 +18,9 @@ export default function Search(props) {
       icon: response.data.weather[0].icon,
       wind: response.data.wind.speed,
       city: response.data.name,
-      feelslike: response.data.main.feels_like,
-      sunrise: response.data.sys.sunrise,
-      sunset: response.data.sys.sunset,
+      feels_like: response.data.main.feels_like,
+      sunrise: new Date(response.data.sys.sunrise * 1000),
+      sunset: new Date(response.data.sys.sunset * 1000),
     });
   }
 
