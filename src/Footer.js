@@ -8,9 +8,8 @@ export default function Footer() {
           Interested in climate change ?
           <div className="col-1">
             <a
-              className="clickhere"
               href="https://blog.feedspot.com/global_warming_blogs/"
-              className="btn btn-light shadow-sm"
+              className="btn btn-light shadow-sm float-right"
             >
               Click Here{" "}
             </a>
