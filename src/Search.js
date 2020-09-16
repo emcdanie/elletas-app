@@ -38,6 +38,23 @@ export default function Search(props) {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
+  function instantLocation(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    let apiKey = `dc3b4bf1b160e133e1bbb630f9cef74a`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+    apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(<Weather />);
+  }
+
+  function getCurrentLocation() {
+    if (navigator.geolocation === "false") {
+      alert("Please turn on your location");
+    } else {
+      navigator.geolocation.getCurrentPosition(instantLocation);
+    }
+  }
 
   if (weatherData.ready) {
     return (
@@ -62,7 +79,11 @@ export default function Search(props) {
               />
             </div>
             <div className="col-3">
-              <button type="button" className="btn btn-light shadow-sm w-100">
+              <button
+                type="button"
+                className="btn btn-light shadow-sm w-100"
+                onClick={getCurrentLocation}
+              >
                 Current
               </button>
             </div>
