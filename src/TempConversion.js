@@ -32,7 +32,7 @@ export default function TempConversion(props) {
     return (
       <div className="TempConversion">
         <span className="temperature">{Math.round(fahrenheit())}</span>
-        <span className="unit">
+        <span className="unitC">
           <a href="/" onClick={showCelsius}>
             °C
           </a>{" "}
