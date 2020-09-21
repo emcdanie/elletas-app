@@ -19,7 +19,7 @@ export default function Footer() {
       <div>
         {" "}
         <div class="row">
-          <div class="col-12">
+          <div class="col-12" className="coded">
             Coded by{" "}
             <a
               className="link"
