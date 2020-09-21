@@ -21,10 +21,7 @@ export default function Footer() {
         <div class="row">
           <div class="col-12" className="coded">
             Coded by{" "}
-            <a
-              className="link"
-              href="https://github.com/emcdanie/WeatherAppProject"
-            >
+            <a className="link" href="https://github.com/emcdanie/elletas-app">
               {" "}
               Elleta Mcdaniel
             </a>{" "}
